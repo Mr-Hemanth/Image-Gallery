@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired
 import os
 
 app = Flask(__name__)
+
 app.config['SECRET_KEY'] = 'your_secret_key'
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
 
@@ -12,7 +13,6 @@ class UploadForm(FlaskForm):
     image = FileField('Image', validators=[DataRequired()])
     comment = TextAreaField('Comment', validators=[DataRequired()])
     submit = SubmitField('Upload')
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = UploadForm()

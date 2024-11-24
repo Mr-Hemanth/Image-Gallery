@@ -22,8 +22,6 @@ def index():
         filename = file.filename
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         
-        # Here, you might want to save the comment in a database or a file
-        # For simplicity, we won't persist comments in this example
         
         return redirect(url_for('index'))
     

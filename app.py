@@ -21,7 +21,7 @@ def index():
     if form.validate_on_submit():
         file = form.image.data
         filename = file.filename
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  
         
         
         return redirect(url_for('index'))

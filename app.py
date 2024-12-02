@@ -23,7 +23,6 @@ def index():
         filename = file.filename
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  
         
-        
         return redirect(url_for('index'))
     
     return render_template('index.html', form=form, images=images)

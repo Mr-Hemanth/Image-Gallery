@@ -27,13 +27,14 @@
 
     <h2 class="mt-5">Uploaded Images</h2>
     <div class="row">
-        
+
         {% for image in images %}
             <div class="col-md-4 mb-3">
                 <img src="{{ url_for('static', filename='uploads/' + image) }}" class="img-fluid">
                 <p>{{ form.comment.label(class="form-label") }}</p>
                 <p>{{ form.comment(class="form-control") }}</p>
             </div>
+            
         {% endfor %}
     </div>
 </div>

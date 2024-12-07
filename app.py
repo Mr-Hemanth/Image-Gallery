@@ -18,7 +18,6 @@ def index():
     form = UploadForm()
     images = os.listdir(app.config['UPLOAD_FOLDER'])
     
-    
     if form.validate_on_submit():
         file = form.image.data
         filename = file.filename

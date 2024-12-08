@@ -16,8 +16,7 @@ class UploadForm(FlaskForm):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = UploadForm()
-    images = os.listdir(app.config['UPLOAD_FOLDER'])
-    
+    images = os.listdir(app.config['UPLOAD_FOLDER'])   
     if form.validate_on_submit():
         file = form.image.data
         filename = file.filename
